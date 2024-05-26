@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: rgb(252, 250, 250);
+}
+
+.container {
+  margin: 0 auto;
+  /* min-width: 730px; */
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  display: block;
+}
