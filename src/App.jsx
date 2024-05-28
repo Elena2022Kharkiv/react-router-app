@@ -5,6 +5,24 @@ import { Layout } from "./components/Layout";
 import './scss/App.scss';
 
 const App = () => { 
+  const data = [
+    { id: 1, text: 'Пропонуємо тури практично в будь-який куточок світу', img: ''},
+    { id: 2, text: 'Зручна польотна програма, авіаквитки на чартерні та регулярні рейси', img: ''},
+    { id: 3, text: 'Хороший вибір готелів, у які захочеться повернутися', img: ''},
+    { id: 4, text: 'Великий список цікавих екскурсій', img: ''},
+    { id: 5, text: 'Дбаємо про туристів 24/7', img: ''},
+    { id: 6, text: 'Працюємо тільки з надійними партнерами, щоб пропонувати кращі тури для наших клієнтів.', img: ''}
+  ]
+
+  const slides = [
+    { id: 1, img: '/img/singapur.jpg' },
+    { id: 2, img: '/img/paris1.jpg' },
+    { id: 3, img: '/img/greese3.jpg' },
+    { id: 4, img: '/img/spain3.jpg' },
+    { id: 5, img: '/img/india2.jpg' },
+    { id: 6, img: '/img/egypt.jpg' },
+    { id: 7, img: '/img/greese.jpg' },
+  ];
 
   const popularTours = [
     { id: 1, country: 'Єгипет', img: '/img/egypt.jpg' },
@@ -41,7 +59,7 @@ const App = () => {
       <Routes>
 
         <Route path="/" element={ <Layout /> }>
-            <Route index element={ <Home /> } />
+            <Route index element={ <Home slides={ slides } data={ data } /> } />
             <Route path="popular" element={ <PopularTours popularTours={ popularTours } /> } /> 
             <Route path="popular/:id" element={ <SingleCountry countries={ countries }/> } /> 
 

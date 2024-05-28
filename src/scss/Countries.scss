@@ -1,5 +1,10 @@
 .countries {
     margin: 30px;
+    &__title {
+        text-align: center;
+        color: #0b0f73;
+        margin-bottom: 20px;    
+    }
     &__items {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -22,9 +27,9 @@
     }
 }
 
-h2 {
-    text-align: center;
-    color: #0b0f73;
-    margin-bottom: 20px;
-}
+// h2 {
+//     text-align: center;
+//     color: #0b0f73;
+//     margin-bottom: 20px;
+// }
 
