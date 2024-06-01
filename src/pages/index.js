@@ -8,3 +8,4 @@ export * from './BusTours';
 export * from './SingleTour';
 export * from './SingleProduct';
 export * from './SingleCountry';
+export * from './SearchTour';

@@ -13,7 +13,7 @@ export const Header = () => {
               <ul className="menu__list">
                 {/* Активный NavLink автоматически получает класс active */}
                 <li className="menu__item">
-                    <NavLink to="/" className={ isActiveCallback }>Home</NavLink>
+                    <NavLink to="/" className={ isActiveCallback }>Про нас</NavLink>
                 </li>
                 <li className="menu__item">
                     <NavLink to="/popular" className={ isActiveCallback }>Популярні напрямки</NavLink>
@@ -30,7 +30,11 @@ export const Header = () => {
                 </li>
 
                 <li className="menu__item">
-                    <NavLink to="/contacts" className={ isActiveCallback }>Contacts</NavLink>
+                    <NavLink to="/searchTour" className={ isActiveCallback }>Пошук туру</NavLink>
+                </li>
+
+                <li className="menu__item">
+                    <NavLink to="/contacts" className={ isActiveCallback }>Контакти</NavLink>
                 </li>
 
               </ul>

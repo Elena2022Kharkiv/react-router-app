@@ -1,15 +1,10 @@
 .country {
-    // padding: 20px;
-    &__title {
-        text-align: center;
-        margin: 10px;
-        color: #0b0f73;
-    }
     &__img-block {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
         border: 3px solid white;
+        margin: 0 26px;
     }
     &__img-item {
         height: 350px;
@@ -18,13 +13,12 @@
             width: 100%;
             height: 100%;
         }
-    } 
-    
+    }     
     &__descr-block {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        border: 3px solid white;
+        margin: 30px;
         h3 {
             margin-bottom: 10px;
         }
@@ -32,7 +26,7 @@
     &__descr-item,
     &__descr-img {
         height: 200px;
-        border: 1px solid silver;
+        // border: 1px solid silver;
         img {
             width: 100%;
             height: 100%;

@@ -7,8 +7,12 @@
     z-index: 100; 
     display: flex;  
     align-items: center;
+    // background: rgb(167,148,233);
+    // background: radial-gradient(circle, rgba(167,148,233,1) 0%, rgba(163,156,233,1) 9%, rgba(117,240,230,1) 90%, rgba(120,242,232,1) 100%);    gap: 10px;
+    // background: rgb(167,148,233);
+    // background: radial-gradient(circle, rgba(167,148,233,1) 0%, rgba(163,156,233,1) 9%, rgba(127,221,231,1) 72%, rgba(127,221,231,1) 100%);
     background: rgb(167,148,233);
-    background: radial-gradient(circle, rgba(167,148,233,1) 0%, rgba(163,156,233,1) 9%, rgba(117,240,230,1) 90%, rgba(120,242,232,1) 100%);    gap: 10px;
+    background: radial-gradient(circle, rgba(167,148,233,1) 0%, rgba(163,156,233,1) 9%, rgba(127,221,231,1) 72%, rgba(115,223,235,1) 100%);
     &__logo {
         height: 70px;  
         margin-right: 20px;
