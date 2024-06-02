@@ -1,0 +1,82 @@
+.searchTour-help {
+    max-width: 1000px;
+    min-width: 750px;
+    margin: 30px auto;
+    background-color: rgb(102, 214, 214);
+    border-radius: 5px;
+    padding: 20px;
+    &__title, 
+    &__info {
+        margin: 20px;
+        text-align: center;
+    }
+    &__form {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    &__form-label {
+        font-size: 18px;
+    }
+    &__form-input {
+        width: 200px;
+        padding: 10px;
+        margin: 5px;
+        background: rgb(252, 250, 250);
+        border: none;
+        outline: none;
+    }
+    &__form-error {
+        color: red;
+        font-size: 16px;
+        margin: 0;
+    }
+    &__form-submit {
+        background: #424595;
+        color: white;
+        width: 200px;
+        padding: 10px;
+        margin: 20px 0;
+        border: none;
+        outline: none;
+
+        &:hover {
+            cursor: pointer;
+            background: #6164b8;
+        }    
+    }
+    &__send-message {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+        height: 200px;
+        padding: 20px;
+        background: white;
+        // background-color: rgb(210, 251, 251);
+        // background: rgb(252, 250, 250);
+        color: #424595;
+        font-size: 18px;
+        text-align: center;
+        border: 2px solid silver;
+        border-radius: 7px;
+        box-shadow: 0 0 15px rgb(68, 68, 68);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__send-message-close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.error {
+    border: 1px solid red;
+}
+

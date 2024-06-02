@@ -1,0 +1,44 @@
+{
+  "tours": [
+    { "id": 1, "category": 1, "title": "Єгипет", "img": "/img/egypt.jpg"},
+    { "id": 2, "category": 1, "title": "Франція", "img": "/img/paris1.jpg" },
+    { "id": 3, "category": 1, "title": "Іспанія", "img": "/img/spain5.jpg" },
+    { "id": 4, "category": 1, "title": "Греція", "img": "/img/greese3.jpg"},
+    { "id": 5, "category": 1, "title": "Індія", "img": "/img/india3.jpg" },
+    { "id": 6, "category": 1, "title": "Турція", "img": "/img/turkey2.jpg" },
+    { "id": 7, "category": 3, "title": "Париж", "descr": "text 1", "img": "/img/paris.jpg" },
+    { "id": 8, "category": 3, "title": "Краків", "descr": "text 2", "img": "/img/paris.jpg" },
+    { "id": 9, "category": 3, "title": "Венеція", "descr": "text 3", "img": "/img/paris.jpg" },
+    { "id": 10, "category": 3, "title": "Барселона", "descr": "text 4", "img": "/img/paris.jpg"},
+    { "id": 11, "category": 3, "title": "Дрезден", "descr": "text 5", "img": "/img/paris.jpg" },
+    { "id": 12, "category": 3, "title": "Прага", "descr": "text 6", "img": "/img/paris.jpg" },
+    { "id": 13, "category": 3, "title": "Рим", "descr": "text 7", "img": "/img/paris.jpg" },
+    { "id": 14, "category": 3, "title": "Амстердам", "descr": "text 8", "img": "/img/paris.jpg" },
+    { "id": 15, "category": 2, "title": "Україна", "img": "/img/ukraina.jpg" },
+    { "id": 16, "category": 2, "title": "Єгипет", "img": "/img/egypt.jpg"},
+    { "id": 17, "category": 2, "title": "Франція", "img": "/img/paris1.jpg" },
+    { "id": 18, "category": 2, "title": "Іспанія", "img": "/img/spain5.jpg" },
+    { "id": 19, "category": 2, "title": "Греція", "img": "/img/greese3.jpg"},
+    { "id": 20, "category": 2, "title": "Індія", "img": "/img/india3.jpg" }
+  ], 
+  "category": [
+    { "id": 1, "name": "popularTours"},
+    { "id": 2, "name": "country"},
+    { "id": 3, "name": "busTours"},
+    { "id": 4, "name": "cities"}
+  ],
+  "users": [
+    { "id": 1, "name": "Elena", "mail": "Elena@gmail.com" }
+  ],
+  "posts": [
+    { "id": 1, "text": "Пропонуємо тури практично в будь-який куточок світу", "img": "/img/icon.png"},
+    { "id": 2, "text": "Зручна польотна програма, авіаквитки на чартерні та регулярні рейси", "img": "/img/icon.png"},
+    { "id": 3, "text": "Хороший вибір готелів, у які захочеться повернутися", "img": "/img/icon.png"},
+    { "id": 4, "text": "Оплата будь-яким зручним способом", "img": "/img/icon.png"},
+    { "id": 5, "text": "Дбаємо про туристів 24/7", "img":"/img/icon.png"},
+    { "id": 6, "text": "15 років на ринку туристичних послуг", "img": "/img/icon.png"},
+    { "id": 7, "text": "Великий список цікавих екскурсій", "img": "/img/icon.png"},
+    { "id": 8, "text": "Працюємо тільки з надійними партнерами, щоб пропонувати кращі тури для наших клієнтів", "img": "/img/icon.png"}
+  ],
+  "card": []
+}
