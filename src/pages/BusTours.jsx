@@ -1,7 +1,11 @@
 import React from 'react';
 import "./../scss/BusTours.scss";
 
-export const BusTours = ( { busTours } ) => {
+export const BusTours = ( props ) => {
+    const { tours } = props;
+    console.log(tours);
+    const busTours = tours.filter(item => item.category === 3);
+    console.log(busTours);
     
     return (
         <div className="busTours">

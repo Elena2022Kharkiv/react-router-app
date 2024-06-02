@@ -2,7 +2,7 @@ import React from 'react';
 import './../scss/Home.scss';
 import { Slider } from '../components/Slider';
 
-export const Home = ({ data }) => {
+export const Home = ({ posts }) => {
 
     return (
       <div className="hero-block">
@@ -15,10 +15,10 @@ export const Home = ({ data }) => {
             </h2>
             <ul className="about__items">
                 {
-                    data.map(item => {
+                    posts.map(item => {
                         return(
                             <li key={item.id} className="about__item">
-                                <img src={process.env.PUBLIC_URL + item.img} alt="" />
+                                <img className="about__img" src={process.env.PUBLIC_URL + item.img} alt="" />
                                 {/* <img src={process.env.PUBLIC_URL + '/img/paris.jpg'} alt="" /> */}
                                 <p className="about__descr">{item.text}</p>
                             </li>
@@ -43,7 +43,6 @@ export const Home = ({ data }) => {
 
         {/* <div>
             <h2>Рекомендуємо відвідати</h2>
-
         </div> */}
 
       </div>

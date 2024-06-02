@@ -5,11 +5,10 @@
 //     object-position: center;
 // }
 
-// .hero-block {
-//   margin-top: 20px;
-//     // background: url('./../../public/img/greese.jpg');
-// }
-
+.hero-block {
+  margin-top: 110px;
+    // background: url('./../../public/img/greese.jpg');
+}
 
 .about {
   margin: 50px 0;
@@ -39,6 +38,9 @@
     padding: 10px;
     display: flex;
     align-items: center;
+  }
+  &__img {
+    margin-right: 15px;
   }
 }
 

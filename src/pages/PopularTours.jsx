@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import { useGetToursQuery } from './../redux/dataApi';
 import "./../scss/PopularTours.scss";
 
-export const PopularTours = ( { popularTours } ) => {
+export const PopularTours = ( { tours } ) => {
+    const popularTours = tours.filter(item => item.category === 1);
+    // console.log(popularTours);
 
     return (
         <div className="popularTours">
@@ -15,7 +18,7 @@ export const PopularTours = ( { popularTours } ) => {
                     return(
                         <li key={ id } className="popularTours__item">
                             <Link to={ `${id}` }>
-                                <h3 className="popularTours__titleTour">{tour.country}</h3>
+                                <h3 className="popularTours__titleTour">{tour.title}</h3>
                                 <div className="popularTours__item-img">
                                     <img src={process.env.PUBLIC_URL + tour.img} alt="popular tours"/>
                                     {/* <img src={process.env.PUBLIC_URL + '/img/egypt.jpg'} />  */}

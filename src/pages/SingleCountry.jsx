@@ -2,8 +2,8 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import './../scss/SingleCountry.scss';
 
-export const SingleCountry = ({ countries }) => {
-    console.log( countries );
+export const SingleCountry = ({ tours }) => {
+    console.log( tours );
 
     const { id } = useParams();
     // const { countryId } = useParams;

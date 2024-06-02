@@ -1,10 +1,5 @@
 .busTours {
     margin: 30px;
-    &__title {
-        // text-align: center;
-        // color: #0b0f73;
-        // margin-bottom: 20px;
-    }
     &__items {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -36,11 +31,7 @@
         font-weight: bold;
         border: none;
         color: rgb(14, 14, 112);
-        background: rgb(147, 226, 248);
-        // background: rgb(131, 213, 236);
-        // background: rgb(125, 203, 225);
-        // background: rgb(130, 223, 248);
-        // background: rgb(130, 130, 248);
+        background-color: rgb(102, 214, 214);
         &:hover {
             cursor: pointer;
         }
