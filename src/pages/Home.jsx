@@ -5,7 +5,7 @@ import { Slider } from '../components/Slider';
 export const Home = ({ posts }) => {
 
     return (
-      <div className="hero-block">
+      <div className="home">
 
         < Slider />
 
@@ -19,7 +19,6 @@ export const Home = ({ posts }) => {
                         return(
                             <li key={item.id} className="about__item">
                                 <img className="about__img" src={process.env.PUBLIC_URL + item.img} alt="" />
-                                {/* <img src={process.env.PUBLIC_URL + '/img/paris.jpg'} alt="" /> */}
                                 <p className="about__descr">{item.text}</p>
                             </li>
                         )

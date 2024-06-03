@@ -1,4 +1,4 @@
 export * from './store';
-export * from './storePosts';
 export * from './dataApi';
+export * from './busToursApi';
 export * from './postsApi';

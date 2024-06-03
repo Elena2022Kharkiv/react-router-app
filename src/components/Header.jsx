@@ -19,7 +19,7 @@ export const Header = () => {
                     <NavLink to="/popular" className={ isActiveCallback }>Популярні напрямки</NavLink>
                 </li>
                 <li className="menu__item">
-                    <NavLink to="/busTours" className={ isActiveCallback }>Автобусні тури Європою</NavLink>
+                    <NavLink to="/busTours" className={ isActiveCallback }>Автобусні тури</NavLink>
                 </li>
                 <li className="menu__item">
                     <NavLink to="/countries" className={ isActiveCallback }>Країни</NavLink>

@@ -2,18 +2,17 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const baseUrl = 'http://localhost:3001';
 
-export const postsApi = createApi({
-  reducerPath: 'postsApi', 
+export const busToursApi = createApi({
+  reducerPath: 'busToursApi', 
   baseQuery: fetchBaseQuery({ baseUrl }),
-  tagTypes: ['Posts'],
+  tagTypes: ['Tours'],
 
   endpoints: ( build ) => ({
 
-    getPosts: build.query({
-      query: () => 'posts',
+    getBusTours: build.query({
+      query: () => 'busTours',
     })
   })
-
 });
 
-export const { useGetPostsQuery } = postsApi;
+export const { useGetBusToursQuery } = busToursApi;

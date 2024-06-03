@@ -4,13 +4,6 @@ import { useState } from 'react';
 import './../scss/SearchTourHelp.scss';
 
 export const SearchTourHelp = () => {
-    // const { register, handleSubmit, formState: { errors } } = useForm({
-    //     defaultValues: {
-    //       name: '',
-    //       mail: '',
-    //     //   select: {},
-    //     },
-    //   }) 
     const { register, handleSubmit, formState: { errors } } = useForm(); 
     const [showMessage, setShowMessage] = useState(false);
     // const active = showMessage ? 'active' : '';
@@ -27,7 +20,7 @@ export const SearchTourHelp = () => {
         console.log('invalid form');
         console.log(error);
     }    
-
+    console.log(showMessage);
     return (
         <div className="searchTour-help">
             <div className="searchTour-help__block">

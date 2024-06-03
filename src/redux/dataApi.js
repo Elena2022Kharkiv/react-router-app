@@ -7,7 +7,6 @@ const toursTagObj = { type: 'Tours', id: 'LIST' };
 export const dataApi = createApi({
   reducerPath: 'dataApi', 
   // reducerPath: 'usersApi', 
-  // reducerPath: 'postsApi', 
   // reducerPath: 'slidesApi', 
   // reducerPath: 'reviewApi', // отзывы
   baseQuery: fetchBaseQuery({ baseUrl }),
@@ -45,4 +44,3 @@ export const dataApi = createApi({
 });
 
 export const { useGetToursQuery, useAddToursMutation } = dataApi;
-// export const { useGetPostsQuery } = dataApi;
