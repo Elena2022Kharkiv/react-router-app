@@ -1,6 +1,5 @@
 export * from './Home';
 export * from './ActiveRest';
-export * from './Contacts';
 export * from './Countries';
 export * from './SingleCountry';
 export * from './PopularTours';
@@ -9,3 +8,4 @@ export * from './SingleTour';
 export * from './SingleProduct';
 export * from './SingleCountry';
 export * from './SearchTour';
+// export * from './Contacts';

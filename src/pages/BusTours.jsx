@@ -3,9 +3,6 @@ import "./../scss/BusTours.scss";
 
 export const BusTours = ( props ) => {
     const { busTours } = props;
-    // console.log(tours);
-    // const busTours = tours.filter(item => item.category === 3);
-    // console.log(busTours);
     
     return (
         <div className="busTours">
@@ -41,18 +38,19 @@ export const BusTours = ( props ) => {
                     busTours.map(tour => {
                         return(
                             <li key={tour.id} className="busTours__item">
-                                {/* <h3 className="busTours__titleTour">{tour.title}</h3> */}
                                 <img className="busTours__img" 
                                     src={process.env.PUBLIC_URL + tour.img} alt="busTour" 
                                 />
-                                <h3 className="busTours__titleTour">{tour.title}</h3>
-                                <p className="busTours__descr busTours__descr_main">{tour.descr}</p>
-                                <p className="busTours__descr">Без нічних переїздів</p>  
-                                <p className="busTours__descr">Тривалість туру {tour.days}</p>
-                                <p className="busTours__descr">Проїзд автобусом єврокласу</p>  
-                                <p className="busTours__descr">Проживання у готелях категорії 3*</p>                                
-                                <p className="busTours__descr">Оглядові екскурсії</p>                                
-                                <p className="busTours__descr">Вартість {tour.price} грн за 1 людину</p>
+                                <div className="busTours__description">
+                                    <h3 className="busTours__titleTour">{tour.title}</h3>
+                                    <h4 className="busTours__descr busTours__descr_main">{tour.descr}</h4>
+                                    <p className="busTours__descr">Без нічних переїздів</p>  
+                                    <p className="busTours__descr">Тривалість туру {tour.days}</p>
+                                    <p className="busTours__descr">Проїзд автобусом єврокласу</p>  
+                                    <p className="busTours__descr">Проживання у готелях 3*</p>                                
+                                    <p className="busTours__descr">Оглядові екскурсії</p>                                
+                                    <p className="busTours__price">Вартість {tour.price} грн</p>
+                                </div>
                                 <button className="busTours__buy">Замовити</button>
                             </li>
                         )

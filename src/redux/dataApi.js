@@ -14,10 +14,6 @@ export const dataApi = createApi({
 
   endpoints: ( build ) => ({
 
-    // getPosts: build.query({
-    //   query: () => 'posts',
-    // }),
-
     getTours: build.query({
       query: () => 'tours',
       providesTags: (result) => (

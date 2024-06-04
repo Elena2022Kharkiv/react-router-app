@@ -16,40 +16,48 @@
     &__logo {
         height: 70px;  
         margin-right: 20px;
-    }   
-    img {
-        height: 100%;
-    }
-
-    .menu {
-        &__list {
-            display: flex;
-            align-items: center;
-            font-size: 17px;
-        }
-        &__link {
-            display: block;
-            padding: 7px;
-            margin: 0 10px;
-            text-decoration: none;
-            // font-size: 16px;
-            border: 2px solid transparent;
-            color: rgb(40, 20, 92);
-        }
-        &__link:hover {
-            /* border-color: black; */
-            border-bottom: 2px solid rgb(116, 24, 174);;
-            // color:white;
-            color: rgb(116, 24, 174);
-
-        }
-        &__link_active {
-            /* border-color: black; */
-            border-bottom: 2px solid rgb(116, 24, 174);;
-            color: rgb(105, 20, 158);
-            font-weight: bold;
+        img {
+            height: 100%;
         }
     }
+    &__cart {
+        margin: 0 20px 0 auto;
+        // margin-left: auto;
+        img {
+            height: 30px;
+        }
+    }
+}
+
+.menu {
+    &__list {
+        display: flex;
+        align-items: center;
+        font-size: 17px;
+    }
+    &__link {
+        display: block;
+        padding: 7px;
+        margin: 0 10px;
+        text-decoration: none;
+        // font-size: 16px;
+        border: 2px solid transparent;
+        color: rgb(40, 20, 92);
+    }
+    &__link:hover {
+        /* border-color: black; */
+        border-bottom: 2px solid rgb(116, 24, 174);;
+        // color:white;
+        color: rgb(116, 24, 174);
+
+    }
+    &__link_active {
+        /* border-color: black; */
+        border-bottom: 2px solid rgb(116, 24, 174);;
+        color: rgb(105, 20, 158);
+        font-weight: bold;
+    }       
+}
 
     // .menu a.active {} - класс active создан автоматически для ссылок а
 
@@ -78,4 +86,4 @@
   //   background: white;
   // }
 
-}
+

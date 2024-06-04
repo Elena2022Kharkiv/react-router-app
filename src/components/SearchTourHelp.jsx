@@ -61,10 +61,12 @@ export const SearchTourHelp = () => {
             </div>
 
             { showMessage && 
-                <div className="searchTour-help__send-message">
-                    <p className="searchTour-help__send-message-close" onClick={setShowMessage(false)}>х</p>
-                    <p className="searchTour-help__send-message-text">Ваша заявка відпpавлена.
-                        <br/>Наш менеджер зв`яжеться з вами найближчим часом.</p>
+                <div className="searchTour-help__send-window">
+                    <div className="searchTour-help__send-message">
+                        <p className="searchTour-help__send-message-close" onClick={setShowMessage(false)}>х</p>
+                        <p className="searchTour-help__send-message-text">Ваша заявка відпpавлена.
+                            <br/>Наш менеджер зв`яжеться з вами найближчим часом.</p>
+                    </div>
                 </div>
             }
         </div>

@@ -5,7 +5,6 @@ const baseUrl = 'http://localhost:3001';
 export const busToursApi = createApi({
   reducerPath: 'busToursApi', 
   baseQuery: fetchBaseQuery({ baseUrl }),
-  tagTypes: ['Tours'],
 
   endpoints: ( build ) => ({
 
