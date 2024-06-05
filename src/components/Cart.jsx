@@ -1,18 +1,14 @@
 import { useState, useEffect } from "react";
-import { getSumm } from "../utils/functions";
+import { getSum } from "../utils/functions";
+import { useGetCartQuery, useAddCartMutation } from './../redux/cartApi';
 // import { useGetCartQuery, useAddCartMutation } from './redux/cartApi';
 import "./../scss/Cart.scss";
 
-export const Cart = (props) => {
-    // const { showCart, toggleShowCart } = props;
-    const { showCart, toggleShowCart, cartData } = props;
-    // const { data: cartData = [] } = useGetCartQuery();
-    console.log(cartData); 
-
-    // const [ cartProductList, setCartProductList ] = useState([]);
-    // const [ update, setUpData ] = useState(false);
+export const Cart = ({ toggleShowCart }) => {
+    const { data: cartData = [] } = useGetCartQuery();
+    // console.log(cartData); 
     const hide = (cartData.length === 0) ? "hide" : '';
-    const show = (cartData.length === 0) ? '' : "hide";
+    // const show = (cartData.length === 0) ? '' : "hide";
 
     // useEffect(() => {
     //     const data = localStorage.getItem('cart');
@@ -38,28 +34,44 @@ export const Cart = (props) => {
 
     return (
       <div className="cart">
-        <div className="cart__container">       
-          <div className="cart__close" onClick={ toggleShowCart }>
-            <img className="cart__close-img" 
+        <div className="cart__container">  
+          <h2 className="cart-list__title">Кошик</h2>     
+          <div className="cart__close" onClick={ toggleShowCart }>            
+              <img className="cart__close-img" 
               src={process.env.PUBLIC_URL + '/img/close_icon.png'} alt="close"
-            />
+              />
           </div>
-          <img className="cart__img" 
-            src={process.env.PUBLIC_URL + '/img/cart-img.png'} alt="cart"
-          />
-          <p className={`cart__text ${show}`}>Кошик порожній</p>
+          { (cartData.length === 0) &&
+            <div className="cart__empty">                        
+              <img className="cart__img" 
+                src={process.env.PUBLIC_URL + '/img/cart-img.png'} alt="cart"
+              />
+              <p className="cart__empty-text">Кошик порожній</p>
+            </div>
+          }
 
           <div className={`cart-list ${hide}`}>
-            <h2 className="cart-list__title">Кошик</h2>
+            
             <ul className="cart-list__content"> 
               {
                 cartData.map(product => 
                   <li className="cart-list__item" key={ product.id }>
 
-                    { product.title } &nbsp;  
-                    <span className="cart-list__price">Price: { product.price }</span>
-                    {/* <span>Price: { product.price } Category: { product.category }</span> */}
-                    
+                    <div className="cart-list__img">
+                      <img src={process.env.PUBLIC_URL + product.img } alt="tour" />
+                    </div>
+                    <div className="cart-list__title-tour"> 
+                        { product.title }                         
+                        <p className="cart-list__price-tour"> { product.price } грн</p>
+                    </div>
+                    <div className="cart-list__quantity">
+                        <p>+</p>
+                        { product.quantity }   
+                        <p>-</p>
+                    </div>
+                    {/* <div className="cart-list__price">
+                        <span className="cart-list__price-tour"> { product.price }</span>
+                    </div> */}
                     <div 
                       className="cart-list__btn-del"
                       data-id={ product.id }
@@ -75,11 +87,11 @@ export const Cart = (props) => {
               }
             </ul>
             <div className="cart-list__total">
-              <p>
-                  Загальна сумма: { getSumm( cartData ) } грн
+              <p className="cart-list__cart-sum">
+                  Загальна сумма: { getSum( cartData ) } грн
               </p> 
             </div>
-            <button className="cart-list__pay-btn">Сплатити</button>
+            <div className="cart-list__pay-btn">Сплатити</div>
           </div>
         </div>          
       </div>

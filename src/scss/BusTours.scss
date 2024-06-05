@@ -64,6 +64,9 @@
             transform: rotate(10deg);
         }
     }
+    &__loader {
+        text-align: center;
+    }
     &__items {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -75,8 +78,10 @@
         color: #0b0f73;
         font-size: 16px;
         // height: 307px;
-        border: 1px solid silver;
+        // border: 1px solid silver;
         // border: 1px solid rgb(14, 14, 112);
+        // background: rgb(246, 244, 244);
+        background: rgb(243, 244, 244);
         border-radius: 5px;
         overflow: hidden;
         position: relative;

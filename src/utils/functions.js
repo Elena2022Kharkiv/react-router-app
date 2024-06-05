@@ -1,4 +1,5 @@
-export const getSumm = (prodArr) => {
+export const getSum = (prodArr) => {
+  
   if (!prodArr.length) {
     return null;
   }

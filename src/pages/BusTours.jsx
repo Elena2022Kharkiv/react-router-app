@@ -1,9 +1,31 @@
 import React from 'react';
+import { useGetBusToursQuery } from './../redux/busToursApi';
+import { useAddCartMutation  } from './../redux/cartApi';
 import "./../scss/BusTours.scss";
 
-export const BusTours = ( props ) => {
-    const { busTours } = props;
-    
+export const BusTours = () => {
+    const { data: busTours = [], isLoading } = useGetBusToursQuery();
+    const [ addCart, { isError } ] = useAddCartMutation();
+    // console.log(busTours, isLoading);
+
+    const addCartHandler = async (e) => {
+        console.log(e.target.dataset.index);
+        const buyIndex = e.target.dataset.index;
+        const buyBusTour = busTours.filter(tour => tour.id == buyIndex);
+        console.log(buyBusTour[0].title);
+
+        if (buyBusTour) {
+            await addCart({ 
+                id: buyBusTour[0].id, 
+                title: buyBusTour[0].title,                
+                img: buyBusTour[0].img,
+                price: buyBusTour[0].price,
+                quantity: 1,
+            }).unwrap();    
+        }
+        console.log(isError);
+    }
+
     return (
         <div className="busTours">
             <div className="busTours__hero-block">
@@ -35,7 +57,9 @@ export const BusTours = ( props ) => {
 
             <ul className="busTours__items">
                 {
-                    busTours.map(tour => {
+                    isLoading 
+                    ? <h3 className="busTours__loader">Loading ...</h3>
+                    : busTours.map(tour => {
                         return(
                             <li key={tour.id} className="busTours__item">
                                 <img className="busTours__img" 
@@ -51,7 +75,7 @@ export const BusTours = ( props ) => {
                                     <p className="busTours__descr">Оглядові екскурсії</p>                                
                                     <p className="busTours__price">Вартість {tour.price} грн</p>
                                 </div>
-                                <button className="busTours__buy">Замовити</button>
+                                <button className="busTours__buy" data-index={ tour.id } onClick={(e) => addCartHandler(e) }>Замовити</button>
                             </li>
                         )
                     })

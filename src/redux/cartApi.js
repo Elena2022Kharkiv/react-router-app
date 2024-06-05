@@ -25,9 +25,26 @@ export const cartApi = createApi({
 
     addCart: build.mutation({
       query: (body) => ({
-        url: 'cart',
+        url: 'cart',      // 'http://localhost:3001/cart'
         method: 'POST',
         body,
+      }),
+      invalidatesTags: [ cartTagObj ]
+    }),
+
+    editCart: build.mutation({
+      query: (id, body) => ({
+        url: `cart/${id}`,      // 'http://localhost:3001/cart/id'
+        method: 'PUT',
+        body,
+      }),
+      invalidatesTags: [ cartTagObj ]
+    }),
+
+    delCart: build.mutation({
+      query: (id) => ({
+        url: `cart/${id}`,      // 'http://localhost:3001/cart/id'
+        method: 'DELETE',
       }),
       invalidatesTags: [ cartTagObj ]
     }),

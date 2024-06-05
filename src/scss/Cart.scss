@@ -15,9 +15,10 @@
 
     &__container {       
     // position: fixed;
-        width: 800px;
+        width: 600px;
+        // max-width: 900px;
         margin-bottom: 70px;
-        padding: 20px;
+        padding: 30px;
         border: 1px solid silver;
         border-radius: 8px;
         position: relative;
@@ -28,7 +29,7 @@
         display: block;
         margin: 20px auto;
     }   
-    &__text {
+    &__empty-text {
         font-weight: bold;
         font-size: 25px;
         text-align: center;
@@ -39,7 +40,7 @@
         top: 10px;
         right: 10px;
         img {
-            width: 25px;
+            width: 20px;
         }
         &:hover {
             cursor: pointer;
@@ -48,37 +49,56 @@
 }
 
 .cart-list {
-    width: 300px;
     margin: 0 auto;
     color: #0d1184;
-    // padding-bottom: 20px;
-    &__title {
-        margin-bottom: 10px;        
+    &__title-tour {
+        margin-bottom: 10px;  
+        font-size: 18px;      
     }
-    &__item,
-    &__total {
-        // width: 500px;
-        // margin: 0 auto;
+    &__price-tour {
+        margin-top: 10px;
+        font-size: 16px;      
+    }
+    &__item {
         display: flex;
         align-items: center;
-        padding: 7px; 
-        margin-bottom: 10px;
-        border: 1px solid silver;
-        border-radius: 3px;
-        background: white;
+        padding-bottom: 10px; 
+        margin: 10px 0;
+        border-bottom: 2px solid silver;
         font-weight: bold;
         & span {
             font-weight: 500;
             color: black;
         }
     }
+    &__img {
+        margin-right: 20px;
+        img {
+            width: 150px;
+            height: 100px;
+        }
+    }
+    &__quantity {
+        margin-left: auto;
+        font-size: 18px;
+    }
     &__total {
-    //     font-weight: 20px;
-        border: 1px solid #424595;
-    }    
+        width: 300px;
+        margin: 0 auto;    
+        display: flex;
+        align-items: center;
+        padding: 7px; 
+        margin-bottom: 10px;
+        border-radius: 3px;
+        // background: white;
+        font-weight: bold;
+        border: 2px solid silver;
+        // border: 1px solid #424595;
+    } 
     &__btn-del {
         display: block;
-        margin-left: auto;
+        margin-left: 30px;
+        // margin-left: auto;
         // margin-right: 5px;
         border: 1px solid silver;
         border-radius: 3px;
@@ -91,8 +111,10 @@
         }
     }
     &__btn-del-img {
-        // width: 15px;
-        height: 15px;
+        width: 15px;
+        img {
+            height: 15px;
+        }
         &:hover {
             cursor: pointer;
             background: #f3f1f1;
@@ -101,11 +123,12 @@
     &__pay-btn {
         width: 300px;
         padding: 10px 20px;
-        margin-top: 10px;
-        // margin-left: 100px;
+        margin: 0 auto;
+        text-align: center;
         background: #424595;
         border-radius: 3px;
         color: white;
+        font-size: 18px;   
         border: none;
         outline: none;
         &:hover {

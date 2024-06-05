@@ -7,13 +7,13 @@ import './../scss/SearchTour.scss';
 export const SearchTour = () => {
     const { register, handleSubmit, formState: { errors } } = useForm(); 
     // const [isToggleActive, setisToggleActive] = useState(false);
-    const [showMessage, setShowMessage] = useState(false);
+    // const [showMessage, setShowMessage] = useState(false);
     
     const submit = data => {
         console.log('form valid');
         console.log(data); 
 
-        setShowMessage(true);
+        // setShowMessage(true);
     }
     
     const formError = error => {
@@ -28,6 +28,7 @@ export const SearchTour = () => {
             <form className="searchTour__form" onSubmit={ handleSubmit(submit, formError) }>
                     <label className="searchTour__form-label">
                         Країна:
+                        <br/>
                         <input type="text" className="searchTour__form-input" 
                             { ...register('country', { required: 'Country is required !!!' }) }/>
                     </label>

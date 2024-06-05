@@ -1,12 +1,14 @@
 import { NavLink } from "react-router-dom";
 import { useToggleCart } from "../hooks/useToggleCart";
+import { useGetCartQuery } from './../redux/cartApi';
 import { Cart } from "./../components/Cart";
 import "./../scss/Header.scss";
 
-export const Header = ({ cartData }) => {
+export const Header = () => {
     const isActiveCallback = ({isActive}) => isActive ? 'menu__link menu__link_active' : 'menu__link';
     const { showCart, toggleShowCart } = useToggleCart(false);
-    // console.log(cartData);
+    const { data: cartData = [] } = useGetCartQuery();
+    // console.log(cartData); 
 
     return (
         <header className="header">
@@ -56,17 +58,11 @@ export const Header = ({ cartData }) => {
                     src={process.env.PUBLIC_URL + '/img/cart_icon.png'}
                     alt="shop-cart"
                 />
+                <div className="header__cart-counter">{ cartData.length }</div>
             </div>
             {
-                showCart && <Cart 
-                    cartData={ cartData }
-                    showCart={ showCart }
-                    toggleShowCart={ toggleShowCart } 
-                    // delProdHandler={ delProdHandler }
-               />
+                showCart && <Cart toggleShowCart={ toggleShowCart } />                   
             }
         </header>
     )    
 }
-
-// export default Header;
