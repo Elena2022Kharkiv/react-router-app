@@ -43,6 +43,14 @@ export const Header = ({ cartData }) => {
               </ul>
             </nav>
 
+            <div className="header__language">
+                <img className="header__lang-icon" 
+                    src={process.env.PUBLIC_URL + '/img/language-icon.png'}
+                    alt="language"
+                />
+                <p className="header__lang">UA</p>
+            </div>
+
             <div className="header__cart" onClick={ () => toggleShowCart() }>
                 <img className="header__cart-icon" 
                     src={process.env.PUBLIC_URL + '/img/cart_icon.png'}

@@ -1,10 +1,10 @@
 .searchTour {
-    margin: 30px;
+    padding: 30px;
     color: hsl(238, 82%, 28%);
     &__form {
         min-width: 1000px;
-        margin: 30px auto;
-        padding: 20px;
+        margin: 30px auto 50px auto;
+        padding: 50px 20px;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         gap: 20px;

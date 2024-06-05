@@ -50,31 +50,36 @@ export const Cart = (props) => {
           <p className={`cart__text ${show}`}>Кошик порожній</p>
 
           <div className={`cart-list ${hide}`}>
-            <h2 className="cart-list__title">cart</h2>
-              <ul className="cart-list__content"> 
-                {
-                  cartData.map(product => 
-                    <li className="cart-list__item" key={ product.id }>
+            <h2 className="cart-list__title">Кошик</h2>
+            <ul className="cart-list__content"> 
+              {
+                cartData.map(product => 
+                  <li className="cart-list__item" key={ product.id }>
 
-                      { product.title } &nbsp;  
-                      <span>Price: { product.price }</span>
-                      {/* <span>Price: { product.price } Category: { product.category }</span> */}
-                      
-                      <button 
-                        className="cart-list__btn-del"
-                        data-id={ product.id }
-                        onClick={(e) => delProductHandler(e)}
-                      > 
-                        Del                                          
-                      </button>
+                    { product.title } &nbsp;  
+                    <span className="cart-list__price">Price: { product.price }</span>
+                    {/* <span>Price: { product.price } Category: { product.category }</span> */}
+                    
+                    <div 
+                      className="cart-list__btn-del"
+                      data-id={ product.id }
+                      onClick={(e) => delProductHandler(e)}
+                    > 
+                      <img className="cart-list__btn-del-img" 
+                        src={process.env.PUBLIC_URL + '/img/close_icon.png'} alt="close"
+                      />
+                    </div>
 
-                    </li>
-                  )
-                }
-              </ul>
-              <div className="cart-list__total"> 
-                  Total: { getSumm( cartData ) } грн
-              </div>
+                  </li>
+                )
+              }
+            </ul>
+            <div className="cart-list__total">
+              <p>
+                  Загальна сумма: { getSumm( cartData ) } грн
+              </p> 
+            </div>
+            <button className="cart-list__pay-btn">Сплатити</button>
           </div>
         </div>          
       </div>

@@ -17,6 +17,7 @@
     // position: fixed;
         width: 800px;
         margin-bottom: 70px;
+        padding: 20px;
         border: 1px solid silver;
         border-radius: 8px;
         position: relative;
@@ -49,9 +50,10 @@
 .cart-list {
     width: 300px;
     margin: 0 auto;
-    padding-bottom: 20px;
+    color: #0d1184;
+    // padding-bottom: 20px;
     &__title {
-        margin-bottom: 10px;
+        margin-bottom: 10px;        
     }
     &__item,
     &__total {
@@ -67,20 +69,48 @@
         font-weight: bold;
         & span {
             font-weight: 500;
+            color: black;
         }
     }
+    &__total {
+    //     font-weight: 20px;
+        border: 1px solid #424595;
+    }    
     &__btn-del {
         display: block;
         margin-left: auto;
-        margin-right: 5px;
+        // margin-right: 5px;
         border: 1px solid silver;
         border-radius: 3px;
         background: white;
-        font-weight: bold;
-        padding: 5px;
+        // font-weight: bold;
+        padding: 3px 3px 0 3px;
         &:hover {
             cursor: pointer;
             background: #f3f1f1;
+        }
+    }
+    &__btn-del-img {
+        // width: 15px;
+        height: 15px;
+        &:hover {
+            cursor: pointer;
+            background: #f3f1f1;
+        }
+    }
+    &__pay-btn {
+        width: 300px;
+        padding: 10px 20px;
+        margin-top: 10px;
+        // margin-left: 100px;
+        background: #424595;
+        border-radius: 3px;
+        color: white;
+        border: none;
+        outline: none;
+        &:hover {
+            cursor: pointer;
+            background: #6164b8;
         }
     }
 }

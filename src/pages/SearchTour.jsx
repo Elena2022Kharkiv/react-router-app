@@ -5,25 +5,15 @@ import { SearchTourHelp } from './../components/SearchTourHelp';
 import './../scss/SearchTour.scss';
 
 export const SearchTour = () => {
-    // const { register, handleSubmit, formState: { errors } } = useForm({
-    //     defaultValues: {
-    //       name: '',
-    //       mail: '',
-    //     //   select: {},
-    //     },
-    //   }) 
     const { register, handleSubmit, formState: { errors } } = useForm(); 
     // const [isToggleActive, setisToggleActive] = useState(false);
     const [showMessage, setShowMessage] = useState(false);
-    // const active = isToggleActive === true ? 'active' : '';
-    // const active = showMessage ? 'active' : '';
     
     const submit = data => {
         console.log('form valid');
         console.log(data); 
 
         setShowMessage(true);
-        // JSON.stringify(data)
     }
     
     const formError = error => {

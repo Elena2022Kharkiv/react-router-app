@@ -1,26 +1,31 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
+import { useAddUsersMutation } from './../redux/usersApi';
 import './../scss/SearchTourHelp.scss';
 
 export const SearchTourHelp = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm(); 
+    const { register, handleSubmit, resetField, formState: { errors } } = useForm(); 
     const [showMessage, setShowMessage] = useState(false);
-    // const active = showMessage ? 'active' : '';
-    
+    const [ addUsers, { isError } ] = useAddUsersMutation();
+   
     const submit = data => {
         console.log('form valid');
         console.log(data);
+        console.log(isError);
 
         setShowMessage(true);
-        // JSON.stringify(data)
+        addUsers({ userName: data.name, userMail: data.mail }).unwrap();
+        resetField('name');
+        
+        resetField('mail');
     }
     
     const formError = error => {
         console.log('invalid form');
         console.log(error);
-    }    
-    console.log(showMessage);
+    }  
+
     return (
         <div className="searchTour-help">
             <div className="searchTour-help__block">
@@ -34,7 +39,7 @@ export const SearchTourHelp = () => {
                         <input 
                             className={ errors?.name ? "searchTour-help__form-input error" : "searchTour-help__form-input" }
                             type="text" name="name" 
-                            placeholder="Ваше ім`я" 
+                            placeholder="Ваше ім`я"
                             { ...register('name', { required: 'Name is required !!!' }) } 
                         />
                         {
@@ -63,7 +68,7 @@ export const SearchTourHelp = () => {
             { showMessage && 
                 <div className="searchTour-help__send-window">
                     <div className="searchTour-help__send-message">
-                        <p className="searchTour-help__send-message-close" onClick={setShowMessage(false)}>х</p>
+                        <p className="searchTour-help__send-message-close" onClick={() => setShowMessage(false)}>х</p>
                         <p className="searchTour-help__send-message-text">Ваша заявка відпpавлена.
                             <br/>Наш менеджер зв`яжеться з вами найближчим часом.</p>
                     </div>

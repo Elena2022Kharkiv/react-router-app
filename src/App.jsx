@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { useGetToursQuery } from './redux/dataApi';
 import { useGetPostsQuery } from './redux/postsApi';
 import { useGetBusToursQuery } from './redux/busToursApi';
+// import { useGetUsersQuery, useAddUsersMutation } from './redux/usersApi';
 import { useGetCartQuery, useAddCartMutation } from './redux/cartApi';
 
 import { useLocalStorage } from './hooks/useLocalStorage';
@@ -15,9 +16,10 @@ const App = () => {
   const { data: tours = [], isLoading } = useGetToursQuery();
   const { data: posts = [] } = useGetPostsQuery();
   const { data: busTours = [] } = useGetBusToursQuery();
+  // const { data: users = [] } = useGetUsersQuery();
   const { data: cartData = [] } = useGetCartQuery();
-  console.log(tours, isLoading);
-  console.log(cartData);
+  // console.log(tours, isLoading);
+  // console.log(cartData);
 
   // const [ dataLocalStorage, setDataLocalStorage ] = useLocalStorage('cart', []);
 

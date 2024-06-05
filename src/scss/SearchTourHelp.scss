@@ -1,7 +1,7 @@
 .searchTour-help {
     max-width: 1000px;
     min-width: 750px;
-    margin: 30px auto;
+    margin: 30px auto 0 auto;
     background-color: rgb(102, 214, 214);
     border-radius: 5px;
     padding: 20px;
@@ -49,9 +49,9 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vh;
+        width: 100%;
         height: 100vh;
-        background: rgba(98, 97, 97, 0.5);
+        background: rgba(98, 97, 97, 0.4);
         display: flex;
         justify-content: center;
         align-items: center;    
@@ -72,6 +72,7 @@
         border: 2px solid silver;
         border-radius: 7px;
         box-shadow: 0 0 15px rgb(68, 68, 68);
+        position: relative;
     }
     &__send-message-close {
         position: absolute;

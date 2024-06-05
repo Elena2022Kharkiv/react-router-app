@@ -1,49 +1,231 @@
 {
   "tours": [
-    { "id": 1, "category": 1, "title": "Єгипет", "img": "/img/egypt.jpg"},
-    { "id": 2, "category": 1, "title": "Франція", "img": "/img/paris1.jpg" },
-    { "id": 3, "category": 1, "title": "Іспанія", "img": "/img/spain5.jpg" },
-    { "id": 4, "category": 1, "title": "Греція", "img": "/img/greese3.jpg"},
-    { "id": 5, "category": 1, "title": "Індія", "img": "/img/india3.jpg" },
-    { "id": 6, "category": 1, "title": "Турція", "img": "/img/turkey2.jpg" },
-    { "id": 7, "category": 2, "title": "Україна", "img": "/img/ukraina.jpg" },
-    { "id": 8, "category": 2, "title": "Єгипет", "img": "/img/egypt.jpg"},
-    { "id": 9, "category": 2, "title": "Франція", "img": "/img/paris1.jpg" },
-    { "id": 10, "category": 2, "title": "Іспанія", "img": "/img/spain5.jpg" },
-    { "id": 11, "category": 2, "title": "Греція", "img": "/img/greese3.jpg"},
-    { "id": 12, "category": 2, "title": "Індія", "img": "/img/india3.jpg" }
-  ], 
+    {
+      "id": 1,
+      "category": 1,
+      "title": "Єгипет",
+      "img": "/img/egypt.jpg"
+    },
+    {
+      "id": 2,
+      "category": 1,
+      "title": "Франція",
+      "img": "/img/paris1.jpg"
+    },
+    {
+      "id": 3,
+      "category": 1,
+      "title": "Іспанія",
+      "img": "/img/spain5.jpg"
+    },
+    {
+      "id": 4,
+      "category": 1,
+      "title": "Греція",
+      "img": "/img/greese3.jpg"
+    },
+    {
+      "id": 5,
+      "category": 1,
+      "title": "Індія",
+      "img": "/img/india3.jpg"
+    },
+    {
+      "id": 6,
+      "category": 1,
+      "title": "Турція",
+      "img": "/img/turkey2.jpg"
+    },
+    {
+      "id": 7,
+      "category": 2,
+      "title": "Україна",
+      "img": "/img/ukraina.jpg"
+    },
+    {
+      "id": 8,
+      "category": 2,
+      "title": "Єгипет",
+      "img": "/img/egypt.jpg"
+    },
+    {
+      "id": 9,
+      "category": 2,
+      "title": "Франція",
+      "img": "/img/paris1.jpg"
+    },
+    {
+      "id": 10,
+      "category": 2,
+      "title": "Іспанія",
+      "img": "/img/spain5.jpg"
+    },
+    {
+      "id": 11,
+      "category": 2,
+      "title": "Греція",
+      "img": "/img/greese3.jpg"
+    },
+    {
+      "id": 12,
+      "category": 2,
+      "title": "Індія",
+      "img": "/img/india3.jpg"
+    }
+  ],
   "category": [
-    { "id": 1, "name": "popularTours"},
-    { "id": 2, "name": "country"},
-    { "id": 3, "name": "cities"}
+    {
+      "id": 1,
+      "name": "popularTours"
+    },
+    {
+      "id": 2,
+      "name": "country"
+    },
+    {
+      "id": 3,
+      "name": "cities"
+    }
   ],
   "busTours": [
-    { "id": 1, "title": "Незабутній Париж", "descr": "Париж, Прага, Краків, Люксембург", "days": "5 днів", "price": "11000", "img": "/img/paris.jpg" },
-    { "id": 2, "title": "Відень та Прага - імперії королів", "descr": "Прага, Відень, Будапешт", "days": "3 дні", "price": "7000", "img": "/img/prague3.jpg" },
-    { "id": 3, "title": "Перлини Італії", "descr": "Венеція, Флоренція, Рим, Мiлан, Верона", "days": "7 днів", "price": "12000", "img": "/img/venice2.avif" },
-    { "id": 4, "title": "Швейцарська казка", "descr": "Берн, Цюрих, Дрезден, Відень, Прага, Краків", "days": "4 дня", "price": "10000", "img": "/img/switzerland.jpg" },
-    { "id": 5, "title": "Яскрава Барселона", "descr": "Барселона, Монако, Верона, Будапешт", "days": "7 днів", "price": "15000", "img": "/img/spain13.jpg"},
-    { "id": 6, "title": "Вікенд у Кракові", "descr": "Краків, Брно, соляна шахта у Величці", "days": "2 дні", "price": "5000", "img": "/img/krakow.jpg" },
-    { "id": 7, "title": "Ласкаво просимо у Флоренцію", "descr": "Флоренція, Венеція, Мiлан", "days": "5 дні", "price": "11000", "img": "/img/Italy3.jpg" },
-    { "id": 8, "title": "Величний та неповторний Рим", "descr": "Рим, Верона, Мiлан, Будапешт", "days": "5 днів", "price": "12000", "img": "/img/rome.jpg" }
+    {
+      "id": 1,
+      "title": "Незабутній Париж",
+      "descr": "Париж, Прага, Краків, Люксембург",
+      "days": "5 днів",
+      "price": "11000",
+      "img": "/img/paris.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Відень та Прага - імперії королів",
+      "descr": "Прага, Відень, Будапешт",
+      "days": "3 дні",
+      "price": "7000",
+      "img": "/img/prague3.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Перлини Італії",
+      "descr": "Венеція, Флоренція, Рим, Мiлан, Верона",
+      "days": "7 днів",
+      "price": "12000",
+      "img": "/img/venice2.avif"
+    },
+    {
+      "id": 4,
+      "title": "Швейцарська казка",
+      "descr": "Берн, Цюрих, Дрезден, Відень, Прага, Краків",
+      "days": "4 дня",
+      "price": "10000",
+      "img": "/img/switzerland.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Яскрава Барселона",
+      "descr": "Барселона, Монако, Верона, Будапешт",
+      "days": "7 днів",
+      "price": "15000",
+      "img": "/img/spain13.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Вікенд у Кракові",
+      "descr": "Краків, Брно, соляна шахта у Величці",
+      "days": "2 дні",
+      "price": "5000",
+      "img": "/img/krakow.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Ласкаво просимо у Флоренцію",
+      "descr": "Флоренція, Венеція, Мiлан",
+      "days": "5 дні",
+      "price": "11000",
+      "img": "/img/Italy3.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Величний та неповторний Рим",
+      "descr": "Рим, Верона, Мiлан",
+      "days": "5 днів",
+      "price": "12000",
+      "img": "/img/rome.jpg"
+    }
   ],
   "users": [
-    { "id": 1, "name": "Elena", "mail": "Elena@gmail.com" }
+    {
+      "id": 1,
+      "userName": "Elena",
+      "userMail": "elena@gmail.com"
+    }
   ],
   "posts": [
-    { "id": 1, "text": "Пропонуємо тури практично в будь-який куточок світу", "img": "/img/icon.png"},
-    { "id": 2, "text": "Зручна польотна програма, авіаквитки на чартерні та регулярні рейси", "img": "/img/icon.png"},
-    { "id": 3, "text": "Хороший вибір готелів, у які захочеться повернутися", "img": "/img/icon.png"},
-    { "id": 4, "text": "Оплата будь-яким зручним способом", "img": "/img/icon.png"},
-    { "id": 5, "text": "Дбаємо про туристів 24/7", "img":"/img/icon.png"},
-    { "id": 6, "text": "15 років на ринку туристичних послуг", "img": "/img/icon.png"},
-    { "id": 7, "text": "Великий список цікавих екскурсій", "img": "/img/icon.png"},
-    { "id": 8, "text": "Працюємо тільки з надійними партнерами, щоб пропонувати кращі тури для наших клієнтів", "img": "/img/icon.png"}
+    {
+      "id": 1,
+      "text": "Пропонуємо тури практично в будь-який куточок світу",
+      "img": "/img/icon.png"
+    },
+    {
+      "id": 2,
+      "text": "Зручна польотна програма, авіаквитки на чартерні та регулярні рейси",
+      "img": "/img/icon.png"
+    },
+    {
+      "id": 3,
+      "text": "Хороший вибір готелів, у які захочеться повернутися",
+      "img": "/img/icon.png"
+    },
+    {
+      "id": 4,
+      "text": "Оплата будь-яким зручним способом",
+      "img": "/img/icon.png"
+    },
+    {
+      "id": 5,
+      "text": "Дбаємо про туристів 24/7",
+      "img": "/img/icon.png"
+    },
+    {
+      "id": 6,
+      "text": "15 років на ринку туристичних послуг",
+      "img": "/img/icon.png"
+    },
+    {
+      "id": 7,
+      "text": "Великий список цікавих екскурсій",
+      "img": "/img/icon.png"
+    },
+    {
+      "id": 8,
+      "text": "Працюємо тільки з надійними партнерами, щоб пропонувати кращі тури для наших клієнтів",
+      "img": "/img/icon.png"
+    }
   ],
   "cart": [
-    { "id": 1, "title": "Незабутній Париж", "descr": "Париж, Прага, Краків, Люксембург", "days": "5 днів", "price": "11000", "img": "/img/paris.jpg" },
-    { "id": 4, "title": "Швейцарська казка", "descr": "Берн, Цюрих, Дрезден, Відень, Прага, Краків", "days": "4 дня", "price": "10000", "img": "/img/switzerland.jpg" },
-    { "id": 6, "title": "Вікенд у Кракові", "descr": "Краків, Брно, соляна шахта у Величці", "days": "2 дні", "price": "5000", "img": "/img/krakow.jpg" }
+    {
+      "id": 1,
+      "title": "Незабутній Париж",
+      "descr": "Париж, Прага, Краків, Люксембург",
+      "days": "5 днів",
+      "price": "11000",
+      "img": "/img/paris.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Швейцарська казка",
+      "descr": "Берн, Цюрих, Дрезден, Відень, Прага, Краків",
+      "days": "4 дня",
+      "price": "10000",
+      "img": "/img/switzerland.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Вікенд у Кракові",
+      "descr": "Краків, Брно, соляна шахта у Величці",
+      "days": "2 дні",
+      "price": "5000",
+      "img": "/img/krakow.jpg"
+    }
   ]
 }
