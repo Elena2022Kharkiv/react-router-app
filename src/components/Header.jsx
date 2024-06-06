@@ -27,13 +27,13 @@ export const Header = () => {
                 <li className="menu__item">
                     <NavLink to="/busTours" className={ isActiveCallback }>Автобусні тури</NavLink>
                 </li>
-                <li className="menu__item">
+                {/* <li className="menu__item">
                     <NavLink to="/countries" className={ isActiveCallback }>Країни</NavLink>
-                </li>
+                </li> */}
 
-                <li className="menu__item">
+                {/* <li className="menu__item">
                     <NavLink to="/activeRest" className={ isActiveCallback }>Активний відпочинок</NavLink>
-                </li>
+                </li> */}
 
                 <li className="menu__item">
                     <NavLink to="/searchTour" className={ isActiveCallback }>Пошук туру</NavLink>

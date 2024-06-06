@@ -8,7 +8,21 @@ export const Cart = ({ toggleShowCart }) => {
     const { data: cartData = [] } = useGetCartQuery();
     // console.log(cartData); 
     const hide = (cartData.length === 0) ? "hide" : '';
-    // const show = (cartData.length === 0) ? '' : "hide";
+
+    const addHandler = (e) => {
+      console.log(e.target.dataset.index);
+      const index = e.target.dataset.index;
+      const buyTour = cartData.filter(tour => tour.id == index);
+      console.log(buyTour);
+      console.log(buyTour[0].quantity);
+  }
+
+    const minusHandler = (e) => {
+      console.log(e.target.dataset.index);
+      const index = e.target.dataset.index;
+      const buyTour = cartData.filter(tour => tour.id == index);
+      console.log(buyTour[0].quantity);
+  }
 
     // useEffect(() => {
     //     const data = localStorage.getItem('cart');
@@ -35,7 +49,6 @@ export const Cart = ({ toggleShowCart }) => {
     return (
       <div className="cart">
         <div className="cart__container">  
-          <h2 className="cart-list__title">Кошик</h2>     
           <div className="cart__close" onClick={ toggleShowCart }>            
               <img className="cart__close-img" 
               src={process.env.PUBLIC_URL + '/img/close_icon.png'} alt="close"
@@ -50,8 +63,8 @@ export const Cart = ({ toggleShowCart }) => {
             </div>
           }
 
-          <div className={`cart-list ${hide}`}>
-            
+          <div className={`cart-list ${hide}`}>  
+            <h2 className="cart-list__title">Кошик</h2>   
             <ul className="cart-list__content"> 
               {
                 cartData.map(product => 
@@ -65,13 +78,18 @@ export const Cart = ({ toggleShowCart }) => {
                         <p className="cart-list__price-tour"> { product.price } грн</p>
                     </div>
                     <div className="cart-list__quantity">
-                        <p>+</p>
-                        { product.quantity }   
-                        <p>-</p>
+                        <div className="cart-list__increment" 
+                          data-index={ product.id }
+                          onClick={(e) => addHandler(e)}
+                        >+
+                        </div>
+                        <div>{ product.quantity }</div>   
+                        <div className="cart-list__decrement"
+                          data-index={ product.id }
+                          onClick={(e) => minusHandler(e)}
+                        >-
+                        </div>
                     </div>
-                    {/* <div className="cart-list__price">
-                        <span className="cart-list__price-tour"> { product.price }</span>
-                    </div> */}
                     <div 
                       className="cart-list__btn-del"
                       data-id={ product.id }

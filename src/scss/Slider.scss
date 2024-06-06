@@ -26,6 +26,7 @@
       color: white;
       font-size: 30px;
       line-height: 1.5;
+      white-space: nowrap;
       z-index: 10;
     }
     &__btn-left,
@@ -60,16 +61,19 @@
   &__dot {
       width: 12px;
       height: 12px;
+      border: 1px solid rgb(255, 196, 0);
       border-radius: 50%;
       margin: 5px;
       background: white;
       z-index: 10;
       &:hover {
           cursor: pointer;
-          background: rgb(129, 126, 126);
+          background-color: rgb(253, 218, 102);
+          // background: rgb(129, 126, 126);
         }
       &_active {
-          background: rgb(59, 51, 145);
+          background-color: rgb(255, 196, 0);
+          // background: rgb(59, 51, 145);
       }
   } 
 }

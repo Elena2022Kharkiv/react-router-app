@@ -15,8 +15,9 @@
 
     &__container {       
     // position: fixed;
-        width: 600px;
-        // max-width: 900px;
+        width: 650px;
+        min-width: 450px;
+        min-height: 400px;
         margin-bottom: 70px;
         padding: 30px;
         border: 1px solid silver;
@@ -81,6 +82,17 @@
     &__quantity {
         margin-left: auto;
         font-size: 18px;
+        text-align: center;
+    }
+    &__increment,
+    &__decrement {
+        margin: 5px 0;
+        font-weight: bold;
+        padding: 0 5px;
+        &:hover {
+            cursor: pointer;
+            background: #f3f1f1;
+        }   
     }
     &__total {
         width: 300px;
@@ -102,12 +114,12 @@
         // margin-right: 5px;
         border: 1px solid silver;
         border-radius: 3px;
-        background: white;
+        // background: white;
         // font-weight: bold;
         padding: 3px 3px 0 3px;
         &:hover {
             cursor: pointer;
-            background: #f3f1f1;
+            background: #e7e5e5;
         }
     }
     &__btn-del-img {
