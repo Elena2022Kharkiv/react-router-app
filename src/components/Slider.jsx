@@ -5,7 +5,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 export const Slider = () => {
     // console.log(slides);
-    const [ animate, setAnimate ] = useState(false);     
+    const [ animate, setAnimate ] = useState(true);     
     const [ currentIndex, setCurrentIndex ] = useState(0)
     const [ direction, setDirection ] = useState('slide-right');
 

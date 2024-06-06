@@ -91,7 +91,7 @@
     {
       "id": "1",
       "title": "Незабутній Париж",
-      "descr": "Париж, Прага, Краків, Люксембург",
+      "descr": "Париж, Прага, Краків, Відень, Люксембург",
       "days": "5 днів",
       "price": "11000",
       "img": "/img/paris.jpg"
@@ -158,6 +158,11 @@
       "id": "1",
       "userName": "Elena",
       "userMail": "elena@gmail.com"
+    },
+    {
+      "id": "a8db",
+      "userName": "Elena",
+      "userMail": "elena@gmail"
     }
   ],
   "posts": [
@@ -204,16 +209,9 @@
   ],
   "cart": [
     {
-      "id": "4",
-      "title": "Швейцарська казка",
-      "img": "/img/switzerland.jpg",
-      "price": "10000",
-      "quantity": 1
-    },
-    {
-      "id": "7",
-      "title": "Ласкаво просимо у Флоренцію",
-      "img": "/img/Italy3.jpg",
+      "id": "1",
+      "title": "Незабутній Париж",
+      "img": "/img/paris.jpg",
       "price": "11000",
       "quantity": 1
     },

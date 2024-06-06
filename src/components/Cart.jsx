@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
 import { getSum } from "../utils/functions";
 import { useGetCartQuery, useAddCartMutation } from './../redux/cartApi';
+import { useLocalStorage } from "./../hooks/useLocalStorage";
+
 // import { useGetCartQuery, useAddCartMutation } from './redux/cartApi';
 import "./../scss/Cart.scss";
 
 export const Cart = ({ toggleShowCart }) => {
+  const [ dataLocalStorage, setDataLocalStorage ] = useLocalStorage('cart', []);
     const { data: cartData = [] } = useGetCartQuery();
     // console.log(cartData); 
     const hide = (cartData.length === 0) ? "hide" : '';
@@ -23,27 +26,19 @@ export const Cart = ({ toggleShowCart }) => {
       const buyTour = cartData.filter(tour => tour.id == index);
       console.log(buyTour[0].quantity);
   }
-
-    // useEffect(() => {
-    //     const data = localStorage.getItem('cart');
-    //     const cartData = (data) ? JSON.parse(data) : [];
-    //     setCartProductList(cartData);
-    //     console.log(cartProductList); 
-    // }, []);
-  
+ 
     const delProductHandler = (e) => {
         console.log(e.target);
-        // const delProdId = e.target.dataset.id;
-        // console.log(delProdId);
 
-        // const newData = cartProductList.filter(item => item.id !== delProdId)
-        // console.log(newData);  
+        const delTourId = e.target.dataset.index;
+        console.log(delTourId);
+
+        const newData = cartData.filter(item => item.id !== delTourId)
+        console.log(newData); 
+
+        setDataLocalStorage('cart', newData); 
+        localStorage.clear();
         
-        // // localStorage.setItem('cart', JSON.stringify(newData));
-        // setCartProductList(newData);
-        // setUpData(true);
-
-        // delProdHandler(newData);  
     }
 
     return (
@@ -92,7 +87,7 @@ export const Cart = ({ toggleShowCart }) => {
                     </div>
                     <div 
                       className="cart-list__btn-del"
-                      data-id={ product.id }
+                      data-index={ product.id }
                       onClick={(e) => delProductHandler(e)}
                     > 
                       <img className="cart-list__btn-del-img" 

@@ -1,13 +1,16 @@
 import React from 'react';
 import { useGetBusToursQuery } from './../redux/busToursApi';
 import { useAddCartMutation  } from './../redux/cartApi';
+import { useLocalStorage } from "./../hooks/useLocalStorage";
+
 import "./../scss/BusTours.scss";
 
 export const BusTours = () => {
     const { data: busTours = [], isLoading } = useGetBusToursQuery();
+    const [ dataLocalStorage, setDataLocalStorage ] = useLocalStorage('cart', []);
     const [ addCart, { isError } ] = useAddCartMutation();
     // console.log(busTours, isLoading);
-
+   
     const addCartHandler = async (e) => {
         console.log(e.target.dataset.index);
         const buyIndex = e.target.dataset.index;
@@ -24,6 +27,8 @@ export const BusTours = () => {
             }).unwrap();    
         }
         console.log(isError);
+
+        setDataLocalStorage([...dataLocalStorage, buyBusTour]); 
     }
 
     return (
